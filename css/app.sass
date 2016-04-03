@@ -7,32 +7,49 @@ $grey: rgb(62, 61, 58)
 
 body
 	background: url("/tomcornall.github.io/images/paper.png")
-	font: bold golden-ratio(14px,  1) $open-sans
+	font: 400 golden-ratio(14px,  1) $open-sans
 	color: $grey
 
-@include keyframes(slide)
-	0%
-		bottom: 0
-	20%
-		bottom: 0
-	55%
-		bottom: 25px
-	100%
-		bottom: 0
+// @include keyframes(slide)
+// 	0%
+// 		bottom: 0
+// 	20%
+// 		bottom: 0
+// 	55%
+// 		bottom: 25px
+// 	100%
+// 		bottom: 0
+
+.pinball
+	bottom: 25px !important
+	// font-size: 75px
 
 #tom
+	cursor: pointer
+
+#dot
+	bottom: 0
+	display: inline-block
 	position: relative
-	+animation-delay(.5)
-	+animation-name(slide)
-	+animation-duration(1s)
-	+animation-timing-function(ease)
-	+animation-iteration-count(infinite)
+	vertical-align: top
+	// +transition(all .5s ease-in-out)
 
 section
 	+outer-container
+	margin-top: 10%
 	nav
 		+shift(1)
 		+span-columns(4)
 		padding: 0 2% 0 2%
+		ul
+			// display: none
+			font-size: golden-ratio(18px,  1)
+			font-weight: 300
+			margin-bottom: golden-ratio(18px,  1)
+		span
+			font-size: golden-ratio(28px,  1)
+			font-weight: 400
 	article
 		+span-columns(6)
+		img
+			+size(280px auto)
