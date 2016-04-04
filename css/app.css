@@ -181,41 +181,37 @@ picture {
   max-width: 100%; }
 
 html {
-  background: white;
-  position: relative; }
+  background: white; }
 
 body {
-  background: url("/tomcornall.github.io/images/paper.png");
+  margin: 0;
+  padding: 0;
+  height: 100vh; }
+
+div:first-of-type {
+  height: 10vh;
+  min-height: 0px; }
+
+div:last-of-type {
+  height: 10vh;
+  min-height: 0px; }
+
+div:nth-of-type(2) {
+  position: relative;
   background: #F58B57;
-  font: 400 22.652px "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000509;
   font-weight: 700;
   width: 800px;
-  height: 800px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  margin-left: calc(50% - 400px);
-  margin-top: calc(50vh - 400px); }
+  height: 100vh;
+  max-height: 750px;
+  margin-left: calc(50% - 400px); }
 
 section:first-of-type ul {
-  font-size: 50px;
+  font-size: 3.1rem;
   margin-left: calc(50% - 255px);
   margin-top: 10px; }
   section:first-of-type ul li:last-of-type {
     margin-top: 45px; }
-
-img:first-of-type {
-  width: 305px;
-  height: 230px;
-  margin-left: 200px;
-  position: absolute;
-  top: calc(50vh - 138px); }
-img:nth-of-type(2) {
-  width: 200px;
-  height: 155px;
-  margin-left: 360px;
-  position: absolute;
-  top: calc(50vh + 183px); }
 
 section:nth-of-type(2) {
   max-width: 68em;
@@ -239,5 +235,18 @@ section:nth-of-type(2) {
       margin-left: -15px; }
     section:nth-of-type(2) ul li {
       margin-bottom: -6px; }
+
+img:first-of-type {
+  width: 305px;
+  height: 230px;
+  margin-left: 190px;
+  position: absolute;
+  top: 266px; }
+img:nth-of-type(2) {
+  width: 200px;
+  height: 155px;
+  margin-left: 360px;
+  position: absolute;
+  top: 583px; }
 
 /*# sourceMappingURL=app.css.map */
