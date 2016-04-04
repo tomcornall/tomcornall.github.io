@@ -7,7 +7,7 @@ $grey: rgb(62, 61, 58)
 $kanye: #F58B57
 $black: #000509
 $potrait: new-breakpoint(min-width 600px)
-$landscape: new-breakpoint(min-width 600px max-height 600px)
+$landscape: new-breakpoint(max-height 600px)
 $cover: 600px
 
 html
@@ -31,7 +31,6 @@ div
 		left: calc(50vw - 300px)
 	@include media($landscape)
 		top: 0
-		height: 100%
 	div
 		background: $kanye
 		color: $black
