@@ -4,52 +4,68 @@
 
 $open-sans: "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif
 $grey: rgb(62, 61, 58)
-
+$kanye: #F58B57
+$black: #000509
+html
+	background: white
 body
 	background: url("/tomcornall.github.io/images/paper.png")
+	background: $kanye
 	font: 400 golden-ratio(14px,  1) $open-sans
-	color: $grey
+	color: $black
+	font-weight: 700
+	width: 800px
+	height: 800px
+	padding-top: 20px
+	padding-bottom: 30px
+	margin-left: calc(50% - 400px)
+	margin-top: calc(50vh - 400px)
 
-// @include keyframes(slide)
-// 	0%
-// 		bottom: 0
-// 	20%
-// 		bottom: 0
-// 	55%
-// 		bottom: 25px
-// 	100%
-// 		bottom: 0
+section:first-of-type
+	ul
+		font-size: 50px
+		margin-left: calc(50% - 255px)
+		margin-top: 10px
+		li:last-of-type
+			margin-top: 45px
+	div
+		background-image: URL("/tomcornall.github.io/images/pablo1.png")
 
-.pinball
-	bottom: 25px !important
-	// font-size: 75px
+section:nth-of-type(2)
+	@include outer-container
+	text-align: center
+	ul
+		@include span-columns(6)
+		font-size: 20px
+		margin-top: -10px
+		&:first-of-type
+			margin-left: -15px
+		li
+			margin-bottom: -6px
 
-#tom
-	cursor: pointer
+// #dot
+// 	bottom: 0
+// 	display: inline-block
+// 	position: relative
+// 	vertical-align: top
 
-#dot
-	bottom: 0
-	display: inline-block
-	position: relative
-	vertical-align: top
-	// +transition(all .5s ease-in-out)
 
-section
-	+outer-container
-	margin-top: 10%
-	nav
-		+shift(1)
-		+span-columns(4)
-		padding: 0 2% 0 2%
-		ul
-			// display: none
-			font-size: golden-ratio(18px,  1)
-			font-weight: 300
-			margin-bottom: golden-ratio(18px,  1)
-		span
-			font-size: golden-ratio(28px,  1)
-			font-weight: 400
-	article
-		+span-columns(6)
-		img
-			+size(280px auto)
+// section
+// 	+outer-container
+// 	margin-top: 10%
+// 	nav
+// 		+shift(1)
+// 		+span-columns(4)
+// 		padding: 0 2% 0 2%
+// 		ul
+// 			// display: none
+// 			font-size: golden-ratio(18px,  1)
+// 			font-weight: 800
+// 			margin-bottom: golden-ratio(18px,  1)
+// 		span
+// 			font-size: golden-ratio(28px,  1)
+// 			font-weight: 400
+// 	article
+// 		+span-columns(6)
+// 		img
+// 			+size(280px auto)

@@ -180,57 +180,52 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+html {
+  background: white; }
+
 body {
   background: url("/tomcornall.github.io/images/paper.png");
+  background: #F58B57;
   font: 400 22.652px "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif;
-  color: #3e3d3a; }
+  color: #000509;
+  font-weight: 700;
+  width: 800px;
+  height: 800px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-left: calc(50% - 400px);
+  margin-top: calc(50vh - 400px); }
 
-.pinball {
-  bottom: 25px !important; }
+section:first-of-type ul {
+  font-size: 50px;
+  margin-left: calc(50% - 255px);
+  margin-top: 10px; }
+  section:first-of-type ul li:last-of-type {
+    margin-top: 45px; }
+section:first-of-type div {
+  background-image: URL("/tomcornall.github.io/images/pablo1.png"); }
 
-#tom {
-  cursor: pointer; }
-
-#dot {
-  bottom: 0;
-  display: inline-block;
-  position: relative;
-  vertical-align: top; }
-
-section {
+section:nth-of-type(2) {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%; }
-  section::after {
+  text-align: center; }
+  section:nth-of-type(2)::after {
     clear: both;
     content: "";
     display: table; }
-  section nav {
-    margin-left: 8.5298%;
+  section:nth-of-type(2) ul {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    padding: 0 2% 0 2%; }
-    section nav:last-child {
+    width: 48.82117%;
+    font-size: 20px;
+    margin-top: -10px; }
+    section:nth-of-type(2) ul:last-child {
       margin-right: 0; }
-    section nav ul {
-      font-size: 29.124px;
-      font-weight: 300;
-      margin-bottom: 29.124px; }
-    section nav span {
-      font-size: 45.304px;
-      font-weight: 400; }
-  section article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    section article:last-child {
-      margin-right: 0; }
-    section article img {
-      height: auto;
-      width: 280px; }
+    section:nth-of-type(2) ul:first-of-type {
+      margin-left: -15px; }
+    section:nth-of-type(2) ul li {
+      margin-bottom: -6px; }
 
 /*# sourceMappingURL=app.css.map */
