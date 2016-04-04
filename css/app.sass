@@ -6,6 +6,10 @@ $open-sans: "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif
 $grey: rgb(62, 61, 58)
 $kanye: #F58B57
 $black: #000509
+$potrait: new-breakpoint(min-width 600px)
+$landscape: new-breakpoint(min-width 600px max-height 600px)
+$cover: 600px
+
 html
 	background: white
 	font-family: $open-sans
@@ -19,53 +23,66 @@ body
 
 div
 	width: 100%
-	max-width: 800px
+	max-width: $cover
 	position: absolute
 	top: 10vw
+	@include media($potrait)
+		top: calc(50vh - 300px)
+		left: calc(50vw - 300px)
+	@include media($landscape)
+		top: 0
+		height: 100%
 	div
-		margin-top: -10px
-		position: relative
 		background: $kanye
 		color: $black
 		font-weight: 700
 		width: 100%
 		height: 0
 		padding-bottom: 100%
+		top: 0
+		left: 0
+		// @include media($mobile)
+			
 
 section:first-of-type
+	margin-top: 7%
 	ul
-		// font-size: 50px
-		font-size: 3.1rem
-		margin-left: calc(50% - 255px)
-		margin-top: 10px
+		margin-left: 15%
+		font-size: 6.5vw
+		@include media($potrait)
+			font-size: 40px
+		li
+			margin-top: -3%
 		li:last-of-type
-			margin-top: 45px
+			margin-top: 5%
 
 section:nth-of-type(2)
 	@include outer-container
 	text-align: center
 	ul
 		@include span-columns(6)
-		font-size: 20px
-		margin-top: -10px
+		font-size: 2.85vw
+		@include media($potrait)
+			font-size: 17px
+		margin-top: -2.5%
 		&:first-of-type
-			margin-left: -15px
+			margin-left: -4%
 		li
-			margin-bottom: -6px
+			margin-bottom: -2%
 
 img
 	&:first-of-type
-		width: 305px
-		height: 230px
-		margin-left: 190px
+		width: 40%
+		height: 25%
+		margin-left: 18%
 		position: absolute
-		top: 266px
+		top: 31%
 	&:nth-of-type(2)
-		width: 200px
-		height: 155px
-		margin-left: 360px
+		width: 28%
+		height: 23%
+		margin-left: 40%
 		position: absolute
-		top: 583px
+		top: 66%
 // #dot
 // 	bottom: 0
 // 	display: inline-block
