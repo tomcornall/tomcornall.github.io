@@ -181,7 +181,8 @@ picture {
   max-width: 100%; }
 
 html {
-  background: white; }
+  background: white;
+  position: relative; }
 
 body {
   background: url("/tomcornall.github.io/images/paper.png");
@@ -202,8 +203,19 @@ section:first-of-type ul {
   margin-top: 10px; }
   section:first-of-type ul li:last-of-type {
     margin-top: 45px; }
-section:first-of-type div {
-  background: url("/tomcornall.github.io/images/pablo1.png"); }
+
+img:first-of-type {
+  width: 305px;
+  height: 230px;
+  margin-left: 200px;
+  position: absolute;
+  top: calc(50vh - 138px); }
+img:nth-of-type(2) {
+  width: 200px;
+  height: 155px;
+  margin-left: 360px;
+  position: absolute;
+  top: calc(50vh + 183px); }
 
 section:nth-of-type(2) {
   max-width: 68em;

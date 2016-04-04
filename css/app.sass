@@ -8,6 +8,8 @@ $kanye: #F58B57
 $black: #000509
 html
 	background: white
+	position: relative
+
 body
 	background: url("/tomcornall.github.io/images/paper.png")
 	background: $kanye
@@ -28,8 +30,22 @@ section:first-of-type
 		margin-top: 10px
 		li:last-of-type
 			margin-top: 45px
-	div
-		background: url("/tomcornall.github.io/images/pablo1.png")
+	
+img
+	&:first-of-type
+		// background: url("/tomcornall.github.io/images/pablo1.png")
+		width: 305px
+		height: 230px
+		// margin-top: -285px
+		margin-left: 200px
+		position: absolute
+		top: calc(50vh - 138px)
+	&:nth-of-type(2)
+		width: 200px
+		height: 155px
+		margin-left: 360px
+		position: absolute
+		top: calc(50vh + 183px)
 
 section:nth-of-type(2)
 	@include outer-container
