@@ -5,7 +5,7 @@
 $open-sans: "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif
 $grey: rgb(62, 61, 58)
 $kanye: #F58B57
-$one: #2CCE93
+$one: #182127
 $black: #000509
 $over-600-width: new-breakpoint(min-width 600px)
 // $under-600-width: new-breakpoint(max-width 599px)
@@ -27,10 +27,9 @@ body
 	height: 100vh
 	position: relative
 
-a
-	color: $black
 #back
 	font-size: 24px
+	margin-left: -3px
 
 .width-is-the-decider
 	width: 100%
@@ -57,11 +56,6 @@ div
 	@include media($over-600-width)
 		top: calc(50vh - 300px)
 		left: calc(50vw - 300px)
-	#cover-1
-		background: $one
-		overflow-y: scroll
-		&::-webkit-scrollbar
-			display: none
 	div
 		background: $kanye
 		color: $black
@@ -99,6 +93,8 @@ section:nth-of-type(2)
 			margin-bottom: -2%
 
 #cover
+	a
+		color: $black
 	img
 		&:first-of-type
 			width: 40%
@@ -114,6 +110,13 @@ section:nth-of-type(2)
 			top: 66%
 
 #cover-1
+	color: white
+	background: $one
+	overflow-y: scroll
+	&::-webkit-scrollbar
+		display: none
+	a
+		color: white
 	position: relative
 	img
 		transition: all 0.1s ease-in
@@ -136,6 +139,7 @@ section:nth-of-type(2)
 		text-align: right
 		font-size: 18px
 		margin-top: -14px
+		margin-right: -2px
 // #dot
 // 	bottom: 0
 // 	display: inline-block

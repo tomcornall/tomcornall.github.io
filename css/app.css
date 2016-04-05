@@ -194,11 +194,9 @@ body {
   height: 100vh;
   position: relative; }
 
-a {
-  color: #000509; }
-
 #back {
-  font-size: 24px; }
+  font-size: 24px;
+  margin-left: -3px; }
 
 .width-is-the-decider {
   width: 100%; }
@@ -223,11 +221,6 @@ div {
     div {
       top: calc(50vh - 300px);
       left: calc(50vw - 300px); } }
-  div #cover-1 {
-    background: #2CCE93;
-    overflow-y: scroll; }
-    div #cover-1::-webkit-scrollbar {
-      display: none; }
   div div {
     background: #F58B57;
     color: #000509;
@@ -277,6 +270,8 @@ section:nth-of-type(2) {
     section:nth-of-type(2) ul li {
       margin-bottom: -2%; }
 
+#cover a {
+  color: #000509; }
 #cover img:first-of-type {
   width: 40%;
   height: 25%;
@@ -291,7 +286,14 @@ section:nth-of-type(2) {
   top: 66%; }
 
 #cover-1 {
+  color: white;
+  background: #182127;
+  overflow-y: scroll;
   position: relative; }
+  #cover-1::-webkit-scrollbar {
+    display: none; }
+  #cover-1 a {
+    color: white; }
   #cover-1 img {
     transition: all 0.1s ease-in;
     margin-left: 40%;
@@ -311,6 +313,7 @@ section:nth-of-type(2) {
   #cover-1 h4 {
     text-align: right;
     font-size: 18px;
-    margin-top: -14px; }
+    margin-top: -14px;
+    margin-right: -2px; }
 
 /*# sourceMappingURL=app.css.map */
