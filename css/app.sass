@@ -8,10 +8,13 @@ $kanye: #F58B57
 $one: #2CCE93
 $black: #000509
 $over-600-width: new-breakpoint(min-width 600px)
-$under-600-width: new-breakpoint(max-width 599px)
+// $under-600-width: new-breakpoint(max-width 599px)
 $over-600-height: new-breakpoint(min-height 600px)
-$under-600-height: new-breakpoint(max-height 599px)
+// $under-600-height: new-breakpoint(max-height 599px)
 $cover: 600px
+
+h1,h2,h3,h4,h5
+	margin: 0
 
 html
 	background: white
@@ -26,6 +29,8 @@ body
 
 a
 	color: $black
+#back
+	font-size: 24px
 
 .width-is-the-decider
 	width: 100%
@@ -49,22 +54,14 @@ div
 	max-width: $cover
 	position: absolute
 	top: calc(50vh - 50vw)
-
 	@include media($over-600-width)
 		top: calc(50vh - 300px)
 		left: calc(50vw - 300px)
-	// @include media($under-600-height)
-	// 	// max-height: 100vh
-	// 	top: 0
-	// 	width: 100vh
-	// 	left: calc(50vw - 50vh)
-
-	// @include media($landscape)
-	// 	top: 0
 	#cover-1
 		background: $one
 		overflow-y: scroll
-
+		&::-webkit-scrollbar
+			display: none
 	div
 		background: $kanye
 		color: $black
@@ -82,8 +79,6 @@ section:first-of-type
 		font-size: 6.5vw
 		@include media($over-600-width)
 			font-size: 40px
-		// @include media($under-600-height)
-		// 	font-size: 6.5vh
 		li
 			margin-top: -3%
 		li:last-of-type
@@ -97,27 +92,54 @@ section:nth-of-type(2)
 		font-size: 2.85vw
 		@include media($over-600-width)
 			font-size: 17px
-		// @include media($under-600-height)
-		// 	font-size: 2.85vh
 		margin-top: -2.5%
 		&:first-of-type
 			margin-left: -4%
 		li
 			margin-bottom: -2%
 
-img
-	&:first-of-type
-		width: 40%
-		height: 25%
-		margin-left: 18%
-		position: absolute
-		top: 31%
-	&:nth-of-type(2)
-		width: 28%
-		height: 23%
+#cover
+	img
+		&:first-of-type
+			width: 40%
+			height: 25%
+			margin-left: 18%
+			position: absolute
+			top: 31%
+		&:nth-of-type(2)
+			width: 28%
+			height: 23%
+			margin-left: 40%
+			position: absolute
+			top: 66%
+
+#cover-1
+	position: relative
+	img
+		transition: all 0.1s ease-in
 		margin-left: 40%
-		position: absolute
-		top: 66%
+		width: 55%
+		&:first-of-type
+			margin-top: 5%
+		&:last-of-type
+			margin-bottom: -100%
+		&:nth-of-type(6)
+			margin-bottom: -5%
+		&:hover
+			margin-left: 0
+			// position: absolute
+			// top: 0
+			// left: 0
+			width: 100%
+
+	h1
+		font-size: 48px
+		text-align: right
+		margin-right: 5%
+	h4
+		text-align: right
+		font-size: 18px
+		margin-top: -14px
 // #dot
 // 	bottom: 0
 // 	display: inline-block
