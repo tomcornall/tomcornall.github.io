@@ -7,6 +7,7 @@ $grey: rgb(62, 61, 58)
 $kanye: #F58B57
 $one: #182127
 $black: #000509
+$link: #355e98
 $over-600-width: new-breakpoint(min-width 600px)
 // $under-600-width: new-breakpoint(max-width 599px)
 $over-600-height: new-breakpoint(min-height 600px)
@@ -117,28 +118,49 @@ section:nth-of-type(2)
 		display: none
 	a
 		color: white
-	position: relative
-	figcaption
-		color: $one
-		transition: all 0.1s ease-in
-		text-align: center
-	img
-		transition: all 0.1s ease-in
-		margin-left: 40%
-		width: 55%
-		&:after
-			content: "HI"
-		&:first-of-type
-			margin-top: 5%
-		&:last-of-type
-			margin-bottom: -100%
-		&:nth-of-type(6)
-			margin-bottom: -5%
 		&:hover
-			margin-left: 22.5%
-		&:hover + figcaption
+			color: $link
+	position: relative
+	figure
+		// margin: 0
+		text-align: center
+		figcaption
+			color: $one
+			font-size: 6.5vw 
+			@include media($over-600-width)
+				font-size: 24px
+			font-weight: 100
+			transition: all 0.1s ease-in
+			text-align: center
+			margin-bottom: 1%
+			&:nth-of-type(6)
+				margin-top: 5%
+		img
+			transition: all 0.1s ease-in
+			// padding-left: 40%
+			// padding-right: 5%
+			max-height: 400px
+			width: auto
+			opacity: 0.5
+		&:first-of-type img
+			margin-top: 5%
+		// &:last-of-type img
+			// margin-bottom: -100%
+		// &:nth-of-type(6) img
+			// margin-bottom: -5%
+		&:hover img
+			// padding-left: 22.5%
+			// padding-right: 22.5%
+			// margin-left: 0.01%
+			opacity: 1
+		&:hover figcaption
 			color: white
-
+	#ski
+		margin-bottom: -140%
+		border-bottom: 30px solid white
+		border-bottom-style: inset
+		border-left: 0.1px solid white
+		border-left-style: outset
 	h1
 		font-size: 48px
 		text-align: right
@@ -148,6 +170,16 @@ section:nth-of-type(2)
 		font-size: 18px
 		margin-top: -14px
 		margin-right: -2px
+
+#back-to-top
+	position: absolute
+	right: 5%
+	bottom: 5%
+	font-size: 3vw
+	@include media($over-600-width)
+		font-size: 18px
+	a
+		color: $kanye
 // #dot
 // 	bottom: 0
 // 	display: inline-block
