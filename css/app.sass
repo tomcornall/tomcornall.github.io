@@ -9,9 +9,7 @@ $one: #182127
 $black: #000509
 $link: #355e98
 $over-600-width: new-breakpoint(min-width 600px)
-// $under-600-width: new-breakpoint(max-width 599px)
 $over-600-height: new-breakpoint(min-height 600px)
-// $under-600-height: new-breakpoint(max-height 599px)
 $cover: 600px
 
 h1,h2,h3,h4,h5
@@ -122,14 +120,12 @@ section:nth-of-type(2)
 			color: $link
 	position: relative
 	figure
-		// margin: 0
 		text-align: center
 		figcaption
 			color: $one
 			font-size: 6.5vw 
 			@include media($over-600-width)
 				font-size: 24px
-			font-weight: 100
 			transition: all 0.1s ease-in
 			text-align: center
 			margin-bottom: 1%
@@ -137,21 +133,12 @@ section:nth-of-type(2)
 				margin-top: 5%
 		img
 			transition: all 0.1s ease-in
-			// padding-left: 40%
-			// padding-right: 5%
 			max-height: 400px
 			width: auto
 			opacity: 0.5
 		&:first-of-type img
 			margin-top: 5%
-		// &:last-of-type img
-			// margin-bottom: -100%
-		// &:nth-of-type(6) img
-			// margin-bottom: -5%
 		&:hover img
-			// padding-left: 22.5%
-			// padding-right: 22.5%
-			// margin-left: 0.01%
 			opacity: 1
 		&:hover figcaption
 			color: white
@@ -180,29 +167,5 @@ section:nth-of-type(2)
 		font-size: 18px
 	a
 		color: $kanye
-// #dot
-// 	bottom: 0
-// 	display: inline-block
-// 	position: relative
-// 	vertical-align: top
 
 
-// section
-// 	+outer-container
-// 	margin-top: 10%
-// 	nav
-// 		+shift(1)
-// 		+span-columns(4)
-// 		padding: 0 2% 0 2%
-// 		ul
-// 			// display: none
-// 			font-size: golden-ratio(18px,  1)
-// 			font-weight: 800
-// 			margin-bottom: golden-ratio(18px,  1)
-// 		span
-// 			font-size: golden-ratio(28px,  1)
-// 			font-weight: 400
-// 	article
-// 		+span-columns(6)
-// 		img
-// 			+size(280px auto)

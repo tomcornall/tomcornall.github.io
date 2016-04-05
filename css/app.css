@@ -301,7 +301,6 @@ section:nth-of-type(2) {
     #cover-1 figure figcaption {
       color: #182127;
       font-size: 6.5vw;
-      font-weight: 100;
       transition: all 0.1s ease-in;
       text-align: center;
       margin-bottom: 1%; }
