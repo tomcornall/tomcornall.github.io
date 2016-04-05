@@ -303,8 +303,7 @@ section:nth-of-type(2) {
     #cover-1 img:nth-of-type(6) {
       margin-bottom: -5%; }
     #cover-1 img:hover {
-      margin-left: 0;
-      width: 100%; }
+      margin-left: 22.5%; }
   #cover-1 h1 {
     font-size: 48px;
     text-align: right;
