@@ -322,9 +322,9 @@ section:nth-of-type(2) {
       color: white; }
   #cover-1 #ski {
     margin-bottom: -140%;
-    border-bottom: 30px solid white;
+    border-bottom: 3vw solid white;
     border-bottom-style: inset;
-    border-left: 0.1px solid white;
+    border-left: 0.1vw solid white;
     border-left-style: outset; }
   #cover-1 h1 {
     font-size: 48px;
