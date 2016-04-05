@@ -118,10 +118,16 @@ section:nth-of-type(2)
 	a
 		color: white
 	position: relative
+	figcaption
+		color: $one
+		transition: all 0.1s ease-in
+		text-align: center
 	img
 		transition: all 0.1s ease-in
 		margin-left: 40%
 		width: 55%
+		&:after
+			content: "HI"
 		&:first-of-type
 			margin-top: 5%
 		&:last-of-type
@@ -130,6 +136,8 @@ section:nth-of-type(2)
 			margin-bottom: -5%
 		&:hover
 			margin-left: 22.5%
+		&:hover + figcaption
+			color: white
 
 	h1
 		font-size: 48px
