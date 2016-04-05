@@ -14,4 +14,8 @@ $(document).ready(function() {
 	  }
 	});
 	$(window).resize();
+
+	$('a').click(function() {
+		$(this).css('color', '#F58B57');
+	});
 });

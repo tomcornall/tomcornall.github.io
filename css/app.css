@@ -217,6 +217,8 @@ div {
     div {
       top: calc(50vh - 300px);
       left: calc(50vw - 300px); } }
+  div #cover-1 {
+    background: #2CCE93; }
   div div {
     background: #F58B57;
     color: #000509;
