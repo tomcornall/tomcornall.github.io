@@ -6,8 +6,10 @@ $open-sans: "Open Sans", "Helvetica", "Roboto", "Arial", sans-serif
 $grey: rgb(62, 61, 58)
 $kanye: #F58B57
 $black: #000509
-$potrait: new-breakpoint(min-width 600px)
-$landscape: new-breakpoint(max-height 600px)
+$over-600-width: new-breakpoint(min-width 600px)
+$under-600-width: new-breakpoint(max-width 599px)
+$over-600-height: new-breakpoint(min-height 600px)
+$under-600-height: new-breakpoint(max-height 599px)
 $cover: 600px
 
 html
@@ -23,17 +25,38 @@ body
 
 a
 	color: $black
-
+.width-is-the-decider
+	width: 100%
+.height-is-the-decider
+	max-height: 100vh
+	top: 0
+	width: 100vh
+	left: calc(50vw - 50vh)
+	div
+		section:first-of-type
+			ul
+				font-size: 6.5vh
+	div
+		section:nth-of-type(2)
+			ul
+				font-size: 2.85vh
 div
 	width: 100%
+	max-height: 100vh
 	max-width: $cover
 	position: absolute
-	top: 10vw
-	@include media($potrait)
+	top: calc(50vh - 50vw)
+	@include media($over-600-width)
 		top: calc(50vh - 300px)
 		left: calc(50vw - 300px)
-	@include media($landscape)
-		top: 0
+	// @include media($under-600-height)
+	// 	// max-height: 100vh
+	// 	top: 0
+	// 	width: 100vh
+	// 	left: calc(50vw - 50vh)
+
+	// @include media($landscape)
+	// 	top: 0
 	div
 		background: $kanye
 		color: $black
@@ -42,17 +65,17 @@ div
 		height: 0
 		padding-bottom: 100%
 		top: 0
-		left: 0
-		// @include media($mobile)
-			
+		left: 0			
 
 section:first-of-type
 	margin-top: 7%
 	ul
 		margin-left: 15%
 		font-size: 6.5vw
-		@include media($potrait)
+		@include media($over-600-width)
 			font-size: 40px
+		// @include media($under-600-height)
+		// 	font-size: 6.5vh
 		li
 			margin-top: -3%
 		li:last-of-type
@@ -64,8 +87,10 @@ section:nth-of-type(2)
 	ul
 		@include span-columns(6)
 		font-size: 2.85vw
-		@include media($potrait)
+		@include media($over-600-width)
 			font-size: 17px
+		// @include media($under-600-height)
+		// 	font-size: 2.85vh
 		margin-top: -2.5%
 		&:first-of-type
 			margin-left: -4%

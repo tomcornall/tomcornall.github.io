@@ -194,18 +194,29 @@ body {
 a {
   color: #000509; }
 
+.width-is-the-decider {
+  width: 100%; }
+
+.height-is-the-decider {
+  max-height: 100vh;
+  top: 0;
+  width: 100vh;
+  left: calc(50vw - 50vh); }
+  .height-is-the-decider div section:first-of-type ul {
+    font-size: 6.5vh; }
+  .height-is-the-decider div section:nth-of-type(2) ul {
+    font-size: 2.85vh; }
+
 div {
   width: 100%;
+  max-height: 100vh;
   max-width: 600px;
   position: absolute;
-  top: 10vw; }
+  top: calc(50vh - 50vw); }
   @media screen and (min-width: 600px) {
     div {
       top: calc(50vh - 300px);
       left: calc(50vw - 300px); } }
-  @media screen and (max-height: 600px) {
-    div {
-      top: 0; } }
   div div {
     background: #F58B57;
     color: #000509;
