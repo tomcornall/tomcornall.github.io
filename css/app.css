@@ -218,7 +218,8 @@ div {
       top: calc(50vh - 300px);
       left: calc(50vw - 300px); } }
   div #cover-1 {
-    background: #2CCE93; }
+    background: #2CCE93;
+    overflow-y: scroll; }
   div div {
     background: #F58B57;
     color: #000509;
