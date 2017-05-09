@@ -1,11 +1,6 @@
 // Copyright Tom Cornall 2016c 24.2352.23.342.3
 $(document).ready(function() {
 
-	// CLICK / ONE
-	$('a').click(function() {
-		$(this).css('color', '#F58B57');
-	});
-
 	// -----     RANDOMIZER      ----- 
 	// -----     NVD credit      ----- 
 	// ----- Phil Emsley, c2016  -----
@@ -25,7 +20,10 @@ $(document).ready(function() {
 	  	$("#wrap").removeClass("height-is-the-decider");
 	  }
 	});
+
 	// Trigger Resizer
 	$(window).resize();
-
+ 
+	$('#haha').get(0).play();
+	$("body").css('background-color', 'black');
 });
